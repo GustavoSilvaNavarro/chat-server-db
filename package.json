@@ -8,6 +8,8 @@
     "url": "codeworks/chat-server-db-exercise"
   },
   "scripts": {
+    "start": "node server/sql/index.js",
+    "start:dev": "start http://localhost:3000 && nodemon server/sql/index.js",
     "precommit": "gulp lint",
     "test": "echo \"No test specified\""
   },
@@ -17,6 +19,7 @@
   "devDependencies": {
     "cz-changelog": "^1.0.1",
     "del": "^6.0.0",
+    "dotenv": "^16.0.3",
     "eslint": "^7.28.0",
     "eslint-plugin-json": "^3.0.0",
     "gulp": "^4.0.2",
@@ -24,7 +27,8 @@
     "gulp-htmllint": "0.0.19",
     "gulp-load-plugins": "^2.0.7",
     "gulp-replace": "^1.1.3",
-    "husky": "6.0.0"
+    "husky": "6.0.0",
+    "nodemon": "^2.0.20"
   },
   "config": {
     "commitizen": {
@@ -35,5 +39,12 @@
     "hooks": {
       "pre-commit": "gulp lint"
     }
+  },
+  "dependencies": {
+    "@koa/router": "^12.0.0",
+    "koa": "^2.13.4",
+    "koa-bodyparser": "^4.3.0",
+    "koa-static": "^5.0.0",
+    "mysql2": "^2.3.3"
   }
 }
