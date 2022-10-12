@@ -2,11 +2,11 @@ CREATE DATABASE IF NOT EXISTS messagescwdb;
 
 USE messagescwdb;
 
-CREATE TABLE messages (
-  id INTEGER(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE IF NOT EXISTS messages (
+  id INTEGER NOT NULL AUTO_INCREMENT,
   authorId BOOLEAN DEFAULT false,
-  content VARCHAR(2500) DEFAULT NULL,
-  timestamp VARCHAR(2500) DEFAULT NULL,
+  content TEXT DEFAULT NULL,
+  timestamp BIGINT DEFAULT 0,
   PRIMARY KEY (id)
 );
 
@@ -15,4 +15,4 @@ DESCRIBE messages;
 
 SELECT * FROM messages;
 
-DROP TABLE messages;
+DROP TABLE IF EXISTS messages;
