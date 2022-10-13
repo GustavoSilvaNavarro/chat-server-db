@@ -1,10 +1,12 @@
 'use strict';
+const { retrieveMessages, postMessages } = require('../models/message-daos');
 const messageMethods = {};
 
-messageMethods.getAllMessages = (ctx, next) => {
+messageMethods.getAllMessages = async (ctx, next) => {
   try {
+    const msgs = await retrieveMessages();
     ctx.status = 200;
-    ctx.body = [];
+    ctx.body = msgs;
   } catch (err) {
     console.error(err.message || err.toString());
     next(err);
@@ -13,7 +15,7 @@ messageMethods.getAllMessages = (ctx, next) => {
 
 messageMethods.saveMessage = (ctx, next) => {
   try {
-    console.log(ctx.request.body);
+    postMessages(ctx.request.body);
     ctx.status = 201;
     ctx.body = 'Success';
   } catch (err) {
