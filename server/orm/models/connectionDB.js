@@ -8,6 +8,7 @@ const { Sequelize } = require('sequelize');
 //   host: env.dbHost,
 //   dialect: env.dbDialect,
 //   port: env.dbPort,
+//   logging: false,
 //   pool: {
 //     max: 5,
 //     min: 0,
@@ -19,7 +20,8 @@ const { Sequelize } = require('sequelize');
 //* Connection for sqlite
 const sequelize = new Sequelize({
   dialect: 'sqlite',
-  storage: './server/orm/db/messages_db.sqlite'
+  storage: './server/orm/db/messages_db.sqlite',
+  logging: false
 });
 
 module.exports = sequelize;
