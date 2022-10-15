@@ -8,12 +8,13 @@ body {
 }
 
 .headerContainer__grid {
+  z-index: 1;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   padding-top: 0.9rem;
   padding-bottom: 0.5rem;
   background-color: #dee2e6;
-  box-shadow: 0px 10px 10px #888888;
+  box-shadow: 0px 2px 10px 2px #888888;
 
   i {
     @include alignElement(end);
@@ -107,7 +108,7 @@ border-radius: 4px;
 .message {
   max-width: 60%;
   color: rgb(102, 102, 102);
-  margin-bottom: 10px;
+  margin-bottom: 10px !important;
   padding: 8px;
   border-radius: 20px;
   box-sizing: border-box;
@@ -133,6 +134,10 @@ border-radius: 4px;
   color: #fff !important;
 }
 
+.message-text {
+  word-wrap: break-word;
+}
+
 .message-time {
   color: rgb(150, 150, 150);
   padding-top: 5px;
@@ -141,6 +146,7 @@ border-radius: 4px;
 }
 
 .sendMessage__container {
+  box-shadow: 0px -2px 10px 2px #888;
   padding: 10px 18px;
   form {
     @include flexStyle(flex-start,'no');

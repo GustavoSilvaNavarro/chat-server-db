@@ -1,0 +1,10 @@
+{
+  "name": "Wall-E Chat",
+  "short_name": "Wall-E",
+  "start_url": "/?home=true",
+  "icons": [],
+  "theme_color": "#fff",
+  "background_color": "#000",
+  "display": "fullscreen",
+  "orientation": "portrait"
+}
