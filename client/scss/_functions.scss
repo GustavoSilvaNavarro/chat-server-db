@@ -1,0 +1,12 @@
+@mixin flexStyle($side, $enable) {
+  display: flex;
+  align-items: center;
+  @if $enable == 'yes' {
+    justify-content: $side;
+  }
+}
+
+@mixin alignElement($side) {
+  align-self: center;
+  justify-self: $side;
+}

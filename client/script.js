@@ -24,10 +24,10 @@ function showMessage (msg) {
   const $HtmlMsg = $(`
     <div class="message ${authorId ? 'right' : 'left'}">
       <div class="message-text">${content}</div>
-      <div class="message-time">${prettifyDate(Number(timestamp))}</div>
+      <div class="message-time ${authorId && 'myMessages'}">${prettifyDate(Number(timestamp))}</div>
     </div>
   `);
-  $('.messages-container').append($HtmlMsg);
+  $('.mainContainer').append($HtmlMsg);
 }
 
 function simulateIncomingMessages () {
@@ -43,7 +43,7 @@ function simulateIncomingMessages () {
 }
 
 function scrollToBottom () {
-  const $messages = $('.messages-container');
+  const $messages = $('.mainContainer');
   $messages.animate({
     scrollTop: $messages[0].scrollHeight
   });
