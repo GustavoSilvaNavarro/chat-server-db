@@ -12,6 +12,10 @@
       font-size: 12px;
     }
   }
+
+  .mainContainer {
+    padding-top: 100px;
+  }
 }
 
 @media (max-height: 281px) and (orientation: landscape) {
@@ -47,6 +51,11 @@
     font-size: 0.6rem;
   }
 
+  .mainContainer {
+    padding-top: 48px;
+    padding-bottom: 60px;
+  }
+
   .sendMessage__container {
     form {
       padding: 5px 10px;
@@ -62,7 +71,7 @@
   }
 }
 
-@media (max-width: 281px) and (orientation: portrait) {
+@media (max-width: 450px) and (orientation: portrait) {
   .userHeader__info {
     img {
       width: 60px;
@@ -79,5 +88,9 @@
 
   .message-time {
     font-size: 0.6rem;
+  }
+
+  .mainContainer {
+    padding-top: 110px;
   }
 }
